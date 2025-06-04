@@ -123,10 +123,57 @@ body {
 }
 
 .map-container {
-    height: 400px;
+    position: relative;
+    margin-top: 2rem;
     background-color: var(--color-light);
     border-radius: 10px;
-    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.map-info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.map-info h3 {
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    font-family: var(--font-secondary);
+}
+
+.map-info p {
+    margin: 0.5rem 0;
+    color: var(--color-dark);
+}
+
+.map-info i {
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+    width: 20px;
+}
+
+.secondary-button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.secondary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(28, 164, 184, 0.4);
 }
 
 /* Weather Section */
