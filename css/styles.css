@@ -1,0 +1,205 @@
+:root {
+    --color-primary: #1CA4B8;
+    --color-secondary: #F7E9D4;
+    --color-accent: #FF7F6B;
+    --color-dark: #153B50;
+    --color-light: #E8F6F7;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--color-primary);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.cta-button {
+    background-color: var(--color-accent);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(21, 59, 80, 0.7), rgba(21, 59, 80, 0.7)),
+                url('https://source.unsplash.com/1600x900/?beach-cleanup') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-secondary);
+}
+
+.primary-button {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 2rem;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 127, 107, 0.4);
+}
+
+/* Map Section */
+.map-section {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.map-container {
+    height: 400px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+/* Weather Section */
+.weather-section {
+    padding: 4rem 2rem;
+    background-color: var(--color-secondary);
+}
+
+.weather-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Events Section */
+.events-section {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-accent);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
